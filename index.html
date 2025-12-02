@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ancy Sneha A | Data Portfolio</title>
+
+<style>
+
+/* -------------------- COLOR THEMES -------------------- */
+
+:root {
+  --bg: #f5f7ff;
+  --text: #1a1f2c;
+  --muted: #525c76;
+  --card: #ffffff;
+  --accent: #5b6dff;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+body.dark {
+  --bg: #0f1724;
+  --text: #f2f5ff;
+  --muted: #9aa4c4;
+  --card: #0b1220;
+  --accent: #6ee7b7;
+  --shadow: 0 8px 24px rgba(4,10,20,0.6);
+}
+
+/* -------------------- GLOBAL -------------------- */
+
+body {
+  margin:0;
+  font-family:"Inter", sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+main {
+  max-width:1000px;
+  margin:40px auto;
+  padding:30px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid rgba(0,0,0,0.07);
+}
+
+.nav {
+  text-align:center;
+  margin-bottom:30px;
+}
+.nav a {
+  margin:0 14px;
+  font-weight:600;
+  color:var(--accent);
+}
+
+/* -------------------- HEADINGS (IMPROVED) -------------------- */
+a:link{
+  text-decoration:none
+}
+.section-title {
+  font-size:1.8rem;
+  margin-top:45px;
+  font-weight:700;
+  position:relative;
+  display:inline-block;
+}
+
+.section-title::after {
+  content:"";
+  width:60%;
+  height:4px;
+  background:linear-gradient(90deg, var(--accent), transparent);
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  border-radius:4px;
+}
+
+/* -------------------- HERO -------------------- */
+
+.hero {
+  display:flex;
+  gap:28px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.profile {
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid rgba(0,0,0,0.1);
+  box-shadow:var(--shadow);
+}
+
+.welcome-box {
+  background: linear-gradient(135deg, var(--accent), transparent);
+  padding:20px;
+  border-radius:12px;
+  color:#fff;
+  max-width:520px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.2);
+}
+
+/* -------------------- SKILLS -------------------- */
+
+.skill-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:12px;
+  margin-top:18px;
+}
+
+.skill-item {
+  background:rgba(0,0,0,0.05);
+  padding:10px 15px;
+  border-radius:10px;
+  font-weight:600;
+}
+
+/* -------------------- TOOLS WITH ICONS -------------------- */
+
+.tool-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap:15px;
+  margin-top:18px;
+}
+
+.tool-item {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  background:rgba(0,0,0,0.05);
+  border-radius:12px;
+  font-weight:600;
+}
+
+.tool-item img {
+  width:26px;
+  height:26px;
+}
+
+/* -------------------- FEATURED PROJECTS (NEW) -------------------- */
+
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.project-card {
+  padding:20px;
+  background:var(--card);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  background:linear-gradient(135deg, var(--accent), var(--card));
+  color:#fff;
+}
+
+.project-card h3 {
+  margin-bottom:8px;
+  font-size:1.3rem;
+}
+
+/* -------------------- CONTACT SECTION (IMPROVED) -------------------- */
+
+.contact-box {
+  background: var(--card);
+  padding:25px;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  margin-top:25px;
+  border-left:6px solid var(--accent);
+}
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.contact-item {
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.contact-item img {
+  width:28px;
+}
+
+.contact-item a {
+  font-weight:600;
+  color:var(--accent);
+}
+
+.theme-toggle {
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:var(--accent);
+  border:none;
+  border-radius:50%;
+  width:42px;
+  height:42px;
+  cursor:pointer;
+  color:white;
+  font-size:1.1rem;
+}
+
+</style>
+</head>
+
+<body class="dark">
+
+<button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+
+<main>
+
+<!-- NAV -->
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="featured.html">Featured Work</a>
+  <a href="projects.html">Projects</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="C:\Users\ancys\OneDrive\Pictures\Documents\GitHub\github-portfolio\Ancy profile.jpeg" class="profile">
+  <div class="welcome-box">
+    <h2 style="margin-top:0;">✨ Welcome!</h2>
+    <p>
+      I'm Ancy Sneha A, an aspiring Data Analyst with a background in data migration, automation, and content structuring at Kovai.co.
+
+I love transforming raw data into insights and building clean, meaningful dashboards and reports. Have a look around I’ve attached all my analytics work here. 😊
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<h2 class="section-title">About Me</h2>
+<p>
+At Kovai.co, I worked as a Migration Specialist where I handled large datasets, performed cleanups, and created structured content models.
+<br>
+I also worked on competitor analysis, strengthening my analytical mindset with real business insights.</p>
+
+<!-- SKILLS -->
+<h2 class="section-title">Skills</h2>
+<div class="skill-grid">
+  <div class="skill-item">Data Cleaning</div>
+  <div class="skill-item">Analysis</div>
+  <div class="skill-item">Visualization</div>
+  <div class="skill-item">Automation</div>
+</div>
+
+<!-- TOOLS -->
+<h2 class="section-title">Tools & Tech</h2>
+<div class="tool-grid">
+  <div class="tool-item"><img src="C:\Users\ancys\OneDrive\Pictures\Documents\GitHub\github-portfolio\python-icon-png-2.jpg"> Python</div>
+  <div class="tool-item"><img src="C:\Users\ancys\OneDrive\Pictures\Documents\GitHub\github-portfolio\SQL.jpg"> SQL</div>
+  <div class="tool-item"><img src="C:\Users\ancys\OneDrive\Pictures\Documents\GitHub\github-portfolio\power-b.png"> Power BI</div>
+  <div class="tool-item"><img src="C:\Users\ancys\OneDrive\Pictures\Documents\GitHub\github-portfolio\excel.png"> Excel</div>
+  <div class="tool-item"><img src="C:\Users\ancys\OneDrive\Pictures\Documents\GitHub\github-portfolio\Github-Logo-Transparent-Background-PNG.png"> GitHub</div>
+</div>
+
+<!-- FEATURED WORK NEW -->
+<h2 class="section-title">Featured Work</h2>
+
+<div class="project-grid">
+
+  <a href="hospital.html" class="project-card">
+    <h3>🏥 Hospital Medical Condition Data</h3>
+    <p>Dashboard + Analysis + Presentation</p>
+  </a>
+
+  <a href="hotel.html" class="project-card">
+    <h3>🏨 Hotel Room Management</h3>
+    <p>Data Model + Analytics + BI Dashboard</p>
+  </a>
+
+  <a href="#" class="project-card">
+    <h3>📁 Project 3</h3>
+    <p>Coming soon</p>
+  </a>
+
+  <a href="#" class="project-card">
+    <h3>📁 Project 4</h3>
+    <p>Coming soon</p>
+  </a>
+
+</div>
+
+<!-- CONTACT -->
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact-box">
+
+  <div class="contact-grid">
+
+    <div class="contact-item">
+      <img src="mail.png"><a href="mailto:ancysnehaa@gmail.com">ancysnehaa@gmail.com</a>
+    </div>
+
+    <div class="contact-item">
+      <img src="phone.png"><a href="tel:9994608350">+91 9994608350</a>
+    </div>
+
+    <div class="contact-item">
+      <img src="linkedin.png">
+      <a href="#">linkedin.com/in/ancy-sneha</a>
+    </div>
+
+    <div class="contact-item">
+      <img src="github.png">
+      <a href="#">github.com/27Ancy</a>
+    </div>
+
+  </div>
+</div>
+
+</main>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+  const btn = document.querySelector(".theme-toggle");
+  btn.innerHTML = document.body.classList.contains("dark") ? "☀️" : "🌙";
+}
+</script>
+
+</body>
+</html>

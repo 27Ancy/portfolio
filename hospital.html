@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Medical Condition – Project</title>
+
+<style>
+:root{
+  --bg:#2f3b8a;
+  --panel:#3747a8;
+  --accent:#6ea0ff;
+  --muted:#c7d0ff;
+  --card:#2c3572;
+  --glass: rgba(255,255,255,0.06);
+  --text:#ffffff;
+  --subtext: #e6e9ff;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:linear-gradient(180deg,var(--bg),#26306a);
+  color:var(--text);
+}
+
+.container{
+  max-width:1100px;
+  margin:36px auto;
+  padding:28px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:18px;
+}
+
+.logo{
+  width:72px;height:72px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),#4b6cff);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:22px;color:#06204a;
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+h1{margin:0;font-size:26px;letter-spacing:0.2px}
+p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:20px;
+  margin-top:20px;
+}
+
+.card{
+  background:var(--panel);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.25);
+  overflow:hidden;
+}
+
+.screenshot{
+  width:100%;height:auto;
+  border-radius:12px;
+  border:4px solid rgba(255,255,255,0.04);
+}
+
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.badge{
+  background:var(--glass);
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:13px;
+  color:var(--subtext);
+}
+
+.section-title{font-weight:700;margin:0 0 8px 0;font-size:16px}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:12px;
+}
+.feature{
+  background:rgba(255,255,255,0.03);
+  padding:12px;
+  border-radius:10px;
+  font-size:14px;
+}
+
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.kpi{
+  flex:1 1 120px;
+  background:linear-gradient(180deg,#2a3a88,#24306a);
+  padding:14px;
+  border-radius:10px;
+  text-align:center;
+}
+.kpi .value{font-size:20px;font-weight:800;color:var(--accent)}
+
+.actions{margin-top:18px;display:flex;gap:10px}
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  color:#06204a;
+  font-weight:700;
+  background:var(--accent);
+  box-shadow:0 6px 16px rgba(78,116,255,0.18)
+}
+.btn.secondary{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--subtext);
+  font-weight:600;
+}
+
+.side-card{
+  padding:16px;
+  border-radius:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))
+}
+.side-card h3{margin:0 0 8px 0;font-size:15px}
+.side-card p{margin:0;color:var(--subtext);font-size:13px;line-height:1.45}
+
+.resume-lines{
+  margin-top:12px;
+  background:rgba(255,255,255,0.02);
+  padding:12px;
+  border-radius:10px;
+  font-family:monospace;
+  font-size:13px;
+}
+
+footer{
+  margin-top:40px;
+  color:var(--muted);
+  font-size:13px;
+  text-align:center;
+}
+
+@media (max-width:980px){
+  .grid{grid-template-columns:1fr; padding-bottom:30px}
+  .features{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+<a href="index.html">⬅ Back</a>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">WL</div>
+    <div>
+      <h1>Patient Waiting List Insights — Power BI Dashboard</h1>
+      <p class="lead">Interactive dashboard analyzing inpatient, outpatient and day-case waiting lists (2018–2021).</p>
+    </div>
+  </div>
+
+  <!-- GRID LAYOUT -->
+  <div class="grid">
+
+    <!-- LEFT CONTENT -->
+    <div>
+
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+          <div>
+            <div class="section-title">Project Snapshot</div>
+            <div style="color:var(--subtext);font-size:13px;margin-top:6px">
+              Consolidated multiple CSV sources, applied specialty mapping, created DAX measures, and built an executive-ready Power BI report.
+            </div>
+          </div>
+
+          <div class="meta">
+            <div class="badge">Tool: Power BI</div>
+            <div class="badge">2018–2021</div>
+            <div class="badge">Waiting Time Analysis</div>
+          </div>
+        </div>
+
+        <hr style="border:none;height:12px;">
+
+        <div class="features" style="margin-top:14px">
+          <div class="feature">
+            <div class="section-title">Key Visuals</div>
+            <ul style="margin:8px 0 0 18px;padding:0;color:var(--subtext)">
+              <li>Overall patient summary</li>
+              <li>Case-type breakdown</li>
+              <li>Age profile & wait buckets</li>
+              <li>Specialty KPIs</li>
+              <li>Time-series trends</li>
+            </ul>
+          </div>
+
+          <div class="feature">
+            <div class="section-title">Analytical Capabilities</div>
+            <ul style="margin:8px 0 0 18px;padding:0;color:var(--subtext)">
+              <li>Data cleaning & mapping</li>
+              <li>DAX: Median, Average, YoY</li>
+              <li>Interactive slicing</li>
+              <li>Executive visuals</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kpis" style="margin-top:14px">
+          <div class="kpi">
+            <div style="font-size:12px;color:var(--subtext)">Latest month</div>
+            <div class="value">709K</div>
+          </div>
+          <div class="kpi">
+            <div style="font-size:12px;color:var(--subtext)">Previous year</div>
+            <div class="value">640K</div>
+          </div>
+          <div class="kpi">
+            <div style="font-size:12px;color:var(--subtext)">Key KPI</div>
+            <div class="value">Median Wait</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#">Download Presentation</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <div class="section-title">Resume-ready Summary</div>
+        <div class="resume-lines">
+Built an interactive Power BI dashboard consolidating inpatient and outpatient waiting lists (2018–2021). Implemented data cleaning, specialty mapping, and DAX measures such as median, average, and YoY change. Designed executive visuals to surface wait-time KPIs, age-profile trends, and time-series analysis.
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT ASIDE -->
+    <aside>
+      <div class="side-card card">
+        <h3>Deliverables</h3>
+        <p style="color:var(--subtext);margin:6px 0 0 0">
+          Power BI report (PBIX), visuals, documentation, and presentation deck.
+        </p>
+
+        <div style="margin-top:12px">
+          <a class="btn" href="#">Download Presentation</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div class="card" style="margin-top:40px;padding:20px;">
+  <h3 style="text-align:center;">📊 Dashboard</h3>
+  <div style="position:relative; width:100%; height:600px; margin-top:20px; margin-bottom:10px;">
+
+    <iframe 
+      width="100%" 
+      height="100%" 
+      src="https://app.powerbi.com/view?r=eyJrIjoiMzZkMmE0M2EtZDk2ZC00NGQzLTgyOGEtOTI5NTI0Y2Y2MWRkIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9"
+      frameborder="0"
+      allowFullScreen="true">
+    </iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Prepared by: <strong>Ancy Sneha</strong> • Project: Patient Waiting List Insights • Tools: Power BI
+  </footer>
+
+</div>
+
+</main>
+
+</body>
+</html>
