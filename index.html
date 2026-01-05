@@ -3,346 +3,335 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ancy Sneha A | Data Portfolio</title>
+<title>Ancy Sneha | Data Analyst Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* -------------------- COLOR THEMES -------------------- */
-
-:root {
-  --bg: #f5f7ff;
-  --text: #1a1f2c;
-  --muted: #525c76;
-  --card: #ffffff;
-  --accent: #5b6dff;
-  --radius: 14px;
-  --shadow: 0 8px 24px rgba(0,0,0,0.15);
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#555555;
+  --card:#f4f4f4;
+  --border:#e0e0e0;
+  --primary:#1DB954;
 }
 
-body.dark {
-  --bg: #0f1724;
-  --text: #f2f5ff;
-  --muted: #9aa4c4;
-  --card: #0b1220;
-  --accent: #6ee7b7;
-  --shadow: 0 8px 24px rgba(4,10,20,0.6);
+body.dark{
+  --bg:#0f0f0f;
+  --text:#ffffff;
+  --muted:#b3b3b3;
+  --card:#181818;
+  --border:#262626;
 }
 
-/* -------------------- GLOBAL -------------------- */
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-  margin:0;
-  font-family:"Inter", sans-serif;
+body{
+  font-family:'Inter',sans-serif;
   background:var(--bg);
   color:var(--text);
-  line-height:1.6;
-  transition: background 0.4s ease, color 0.4s ease;
+  line-height:1.7;
+  transition:.3s;
 }
 
-main {
-  max-width:1000px;
-  margin:40px auto;
-  padding:30px;
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  border:1px solid rgba(0,0,0,0.07);
-}
-
-.nav {
-  text-align:center;
-  margin-bottom:30px;
-}
-.nav a {
-  margin:0 14px;
-  font-weight:600;
-  color:var(--accent);
-}
-
-/* -------------------- HEADINGS (IMPROVED) -------------------- */
-a:link{
-  text-decoration:none
-}
-.section-title {
-  font-size:1.8rem;
-  margin-top:45px;
-  font-weight:700;
+header{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px 60px;
   position:relative;
-  display:inline-block;
 }
 
-.section-title::after {
-  content:"";
-  width:60%;
-  height:4px;
-  background:linear-gradient(90deg, var(--accent), transparent);
+.toggle{
   position:absolute;
-  bottom:-6px;
-  left:0;
-  border-radius:4px;
-}
-
-/* -------------------- HERO -------------------- */
-
-.hero {
-  display:flex;
-  gap:28px;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
-.profile {
-  width:150px;
-  height:150px;
-  object-fit:cover;
-  border-radius:50%;
-  border:4px solid rgba(0,0,0,0.1);
-  box-shadow:var(--shadow);
-}
-
-.welcome-box {
-  background: linear-gradient(135deg, var(--accent), transparent);
-  padding:20px;
-  border-radius:12px;
-  color:#fff;
-  max-width:520px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.2);
-}
-
-/* -------------------- SKILLS -------------------- */
-
-.skill-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap:12px;
-  margin-top:18px;
-}
-
-.skill-item {
-  background:rgba(0,0,0,0.05);
-  padding:10px 15px;
-  border-radius:10px;
-  font-weight:600;
-}
-
-/* -------------------- TOOLS WITH ICONS -------------------- */
-
-.tool-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap:15px;
-  margin-top:18px;
-}
-
-.tool-item {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:12px;
-  background:rgba(0,0,0,0.05);
-  border-radius:12px;
-  font-weight:600;
-}
-
-.tool-item img {
-  width:26px;
-  height:26px;
-}
-
-/* -------------------- FEATURED PROJECTS (NEW) -------------------- */
-
-.project-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:20px;
-  margin-top:20px;
-}
-
-.project-card {
-  padding:20px;
-  background:var(--card);
-  border-radius:14px;
-  box-shadow:var(--shadow);
-  border:1px solid rgba(255,255,255,0.08);
-  transition:0.35s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-7px);
-  background:linear-gradient(135deg, var(--accent), var(--card));
-  color:#fff;
-}
-
-.project-card h3 {
-  margin-bottom:8px;
-  font-size:1.3rem;
-}
-
-/* -------------------- CONTACT SECTION (IMPROVED) -------------------- */
-
-.contact-box {
-  background: var(--card);
-  padding:25px;
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  margin-top:25px;
-  border-left:6px solid var(--accent);
-}
-
-.contact-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:20px;
-  margin-top:20px;
-}
-
-.contact-item {
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-
-.contact-item img {
-  width:28px;
-}
-
-.contact-item a {
-  font-weight:600;
-  color:var(--accent);
-}
-
-.theme-toggle {
-  position:fixed;
   top:20px;
   right:20px;
-  background:var(--accent);
-  border:none;
-  border-radius:50%;
-  width:42px;
-  height:42px;
+  padding:8px 16px;
+  border-radius:20px;
+  border:1px solid var(--border);
+  background:var(--card);
   cursor:pointer;
-  color:white;
-  font-size:1.1rem;
+  font-weight:600;
 }
 
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1fr 180px;
+  gap:40px;
+  align-items:center;
+}
+
+.hero img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid var(--primary);
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:700;
+}
+
+.hero h1 span{
+  color:var(--primary);
+}
+
+.hero p{
+  margin-top:15px;
+  max-width:650px;
+  font-size:1.15rem;
+  color:var(--muted);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 20px 80px;
+}
+
+section{margin-top:80px}
+
+.section-title{
+  font-size:1.9rem;
+  margin-bottom:35px;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  position:absolute;
+  width:50px;
+  height:4px;
+  background:var(--primary);
+  bottom:-10px;
+  left:0;
+  border-radius:2px;
+}
+
+/* ABOUT */
+.about{
+  max-width:900px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.skill-card{
+  background:var(--card);
+  padding:28px;
+  border-radius:18px;
+  border:1px solid var(--border);
+}
+
+.skill-card h3{
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+.skill-card li{
+  margin-bottom:10px;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+.project{
+  background:var(--card);
+  padding:28px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  transition:.3s;
+}
+
+.project:hover{
+  transform:translateY(-6px);
+}
+
+.project h3{
+  margin-bottom:10px;
+}
+
+.project p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.project a{
+  color:var(--primary);
+  font-weight:600;
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media(max-width:768px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .hero img{
+    margin:auto;
+  }
+  .hero h1{font-size:2.2rem}
+}
 </style>
 </head>
 
-<body class>
+<body>
 
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+<header>
+  <button class="toggle" onclick="toggleTheme()">🌙 Dark</button>
 
-<main>
+  <div class="hero">
+    <div>
+      <h1>Hello, I'm <span>Ancy Sneha</span></h1>
+      <p>
+        Aspiring Data Analyst with hands-on experience in Python, SQL,
+        Advanced Excel, and data visualization. I enjoy working with data,
+        identifying patterns, and converting complex datasets into
+        meaningful insights that support business decisions.
+      </p>
+    </div>
 
-<!-- NAV -->
-<div class="nav">
-  <a href="index.html">Home</a>
-  <a href="featured.html">Featured Work</a>
-  <a href="projects.html">Projects</a>
-</div>
-
-<!-- HERO -->
-<div class="hero">
-  <img src="Ancy_profile.jpeg" class="profile">
-  <div class="welcome-box">
-    <h2 style="margin-top:0;">✨ Welcome!</h2>
-    <p>
-      I'm Ancy Sneha A, an aspiring Data Analyst with a background in data migration, automation, and content structuring at Kovai.co.
-
-I love transforming raw data into insights and building clean, meaningful dashboards and reports. Have a look around I’ve attached all my analytics work here. 😊
-    </p>
+    <img src="hotel.jpg" alt="Profile Photo">
   </div>
-</div>
+</header>
+
+<div class="container">
 
 <!-- ABOUT -->
-<h2 class="section-title">About Me</h2>
-<p>
-At Kovai.co, I worked as a Migration Specialist where I handled large datasets, performed cleanups, and created structured content models.
-<br>
-I also worked on competitor analysis, strengthening my analytical mindset with real business insights.</p>
+<section>
+  <h2 class="section-title">Who I Am</h2>
+  <div class="about">
+    <p>
+      I come from a technical background and have worked extensively with
+      structured data, automation, and problem-solving. Over time, my
+      interest shifted towards understanding data beyond code — exploring
+      trends, uncovering insights, and answering business questions through
+      analysis.
+    </p>
+    <br>
+    <p>
+      I am currently building strong foundations in Data Analytics using
+      real-world datasets. I enjoy working on end-to-end projects involving
+      data cleaning, exploratory data analysis, visualization, and
+      storytelling. My goal is to grow as a Data Analyst and contribute to
+      data-driven decision-making in a meaningful way.
+    </p>
+  </div>
+</section>
 
-<!-- SKILLS -->
-<h2 class="section-title">Skills</h2>
-<div class="skill-grid">
-  <div class="skill-item">Data Cleaning</div>
-  <div class="skill-item">Analysis</div>
-  <div class="skill-item">Visualization</div>
-  <div class="skill-item">Automation</div>
-</div>
+<!-- SKILLS-->
+ <section>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
 
-<!-- TOOLS -->
-<h2 class="section-title">Tools & Tech</h2>
-<div class="tool-grid">
-  <div class="tool-item"><img src="python-icon-png-2.jpg"> Python</div>
-  <div class="tool-item"><img src="SQL.jpg"> SQL</div>
-  <div class="tool-item"><img src="power-b.png"> Power BI</div>
-  <div class="tool-item"><img src="excel.png"> Excel</div>
-  <div class="tool-item"><img src="Github-Logo-Transparent-Background-PNG.png"> GitHub</div>
-</div>
-
-<!-- FEATURED WORK NEW -->
-<h2 class="section-title">Featured Work</h2>
-
-<div class="project-grid">
-
-  <a href="hospital.html" class="project-card">
-    <h3>🏥 Hospital Medical Condition Data</h3>
-    <p>Dashboard + Analysis + Presentation</p>
-  </a>
-
-  <a href="hotel.html" class="project-card">
-    <h3>🏨 Hotel Room Management</h3>
-    <p>Data Model + Analytics + BI Dashboard</p>
-  </a>
-
-  
-
-</div>
-
-<!-- CONTACT -->
-<h2 class="section-title">Contact Me</h2>
-
-<div class="contact-box">
-
-  <div class="contact-grid">
-
-   <div class="contact-item">
-  <img src="mail.png"><a href="mailto:ancysnehaa@gmail.com">ancysnehaa@gmail.com</a>
-</div>
-
-<div class="contact-item">
-  <img src="phone.png"><a href="tel:9994608350">+91 9994608350</a>
-</div>
-
-    <div class="contact-item">
-      <img src="linkedIn.png">
-      <a href="https://www.linkedin.com/in/ancy-sneha">linkedin.com/in/ancy-sneha</a>
+    <div class="skill-card">
+      <h3>Programming & Databases</h3>
+      <ul>
+        <li>Python</li>
+        <li>SQL (MySQL, PostgreSQL)</li>
+        <li>ETL Concepts</li>
+      </ul>
     </div>
 
-    <div class="contact-item">
-      <img src="Github-Logo-Transparent-Background-PNG.png">
-      <a href="https://github.com/27Ancy">github.com/27Ancy</a>
+    <div class="skill-card">
+      <h3>Data Analysis</h3>
+      <ul>
+        <li>Pandas & NumPy</li>
+        <li>Exploratory Data Analysis (EDA)</li>
+        <li>Data Cleaning</li>
+        <li>Power BI</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Visualization & Tools</h3>
+      <ul>
+        <li>Matplotlib & Seaborn</li>
+        <li>Jupyter Notebook</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Advanced Excel</h3>
+      <ul>
+        <li>Pivot Tables & Charts</li>
+        <li>Power Query</li>
+        <li>VLOOKUP / XLOOKUP</li>
+        <li>Dashboard Creation</li>
+      </ul>
     </div>
 
   </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section>
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects">
+
+    <div class="project">
+      <h3>Spotify Streaming Trends Analysis</h3>
+      <p>
+        Analyzed Spotify data to identify artist popularity, genre trends,
+        and user listening behavior using Python and SQL.
+      </p>
+      <a href="spotify.html" target="_blank">View Project →</a>
+    </div>
+
+    <div class="project">
+      <h3>Hotel Booking Data Analysis</h3>
+      <p>
+        Analyzed hotel booking data to identify cancellation patterns,
+        seasonal trends, and customer behavior using Python and Excel.
+      </p>
+      <a href="hotel.html">View Project →</a>
+    </div>
+
+    <div class="project">
+      <h3>Hospital Management Data Analysis</h3>
+      <p>
+        Worked on hospital data to analyze patient flow, department-wise
+        performance, and resource utilization.
+      </p>
+      <a href="hospital.html">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
 </div>
 
-</main>
+<footer>
+  © 2026 | Ancy Sneha — Data Analytics Portfolio
+</footer>
 
 <script>
-function toggleTheme() {
+function toggleTheme(){
   document.body.classList.toggle("dark");
-  const btn = document.querySelector(".theme-toggle");
-  btn.innerHTML = document.body.classList.contains("dark") ? "☀️" : "🌙";
 }
-
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
