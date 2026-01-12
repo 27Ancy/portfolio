@@ -191,6 +191,96 @@ footer{
   }
   .hero h1{font-size:2.2rem}
 }
+/* Contact Section */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f9fafb;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.contact-subtitle {
+  font-size: 1.05rem;
+  color: #4b5563;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Cards */
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 30px;
+  width: 260px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #1f2937;
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.contact-link {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2563eb;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.contact-link:hover {
+  border-color: #2563eb;
+}
+
+/* Highlight WhatsApp */
+.contact-card.highlight {
+  border: 2px solid #22c55e;
+}
+
+.contact-card.highlight .contact-link {
+  color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 </style>
 </head>
 
@@ -329,6 +419,35 @@ footer{
 
   </div>
 </section>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Let’s Work Together</h2>
+    <p class="contact-subtitle">
+      Need quick help with Excel automation, SQL queries, Power BI dashboards, or reports?  
+      I focus on fast delivery and business-ready results.
+    </p>
+
+    <div class="contact-cards">
+      <!-- Email -->
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p>Reach me anytime</p>
+        <a href="mailto:ancy.sneha@email.com" class="contact-link">
+          ancy.sneha@email.com
+        </a>
+      </div>
+
+      <!-- WhatsApp -->
+      <div class="contact-card highlight">
+        <h3>WhatsApp</h3>
+        <p>Fastest response</p>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="contact-link">
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 </div>
 
@@ -344,4 +463,5 @@ function toggleTheme(){
 
 </body>
 </html>
+
 
