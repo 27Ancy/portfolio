@@ -1,224 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ancy Sneha | Data Analyst</title>
+<title>Ancy Sneha A | Data Analyst Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 
-/* ---------- GLOBAL ---------- */
+/* ---------------- GLOBAL ---------------- */
 
 body{
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 margin:0;
-background:#f8fafc;
+background:#ffffff;
 color:#111827;
-line-height:1.6;
+line-height:1.7;
 }
 
-h1,h2,h3{
-margin-bottom:10px;
+section{
+max-width:1150px;
+margin:auto;
+padding:60px 20px;
 }
 
-.section{
-padding:80px 10%;
-}
-
-.section h2{
-font-size:2rem;
-margin-bottom:40px;
+h2{
 text-align:center;
+font-size:2.2rem;
+margin-bottom:35px;
 }
 
-/* ---------- HERO ---------- */
+/* ---------------- HERO ---------------- */
 
 .hero{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:80px 10%;
+gap:60px;
 flex-wrap:wrap;
-gap:40px;
+padding-top:100px;
 }
 
 .hero h1{
 font-size:3rem;
+margin-bottom:5px;
 }
 
-.hero span{
+.role{
 color:#2563eb;
+font-weight:600;
 }
 
 .hero p{
-max-width:500px;
+max-width:600px;
 color:#4b5563;
+margin-top:15px;
 }
-
-.profile{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-}
-
-/* ---------- BUTTONS ---------- */
 
 .btn{
 display:inline-block;
-padding:12px 24px;
+margin-top:25px;
+padding:13px 26px;
+background:#2563eb;
+color:white;
 border-radius:8px;
 text-decoration:none;
 font-weight:600;
-margin-top:20px;
-margin-right:10px;
+transition:.3s;
 }
 
-.primary{
+.btn:hover{
+background:#1e40af;
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:2px solid #2563eb;
+color:#2563eb;
+padding:12px 24px;
+border-radius:8px;
+margin-left:12px;
+text-decoration:none;
+}
+
+.btn-outline:hover{
 background:#2563eb;
 color:white;
 }
 
-.outline{
-border:2px solid #2563eb;
+/* HERO VISUAL */
+
+.hero-visual{
+font-size:60px;
 color:#2563eb;
-}
-
-/* ---------- SKILLS STRIP ---------- */
-
-.skills-strip{
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:12px;
-padding:30px 10%;
-background:white;
+gap:25px;
+animation:float 6s infinite ease-in-out;
 }
 
-.skills-strip span{
-background:#eef2ff;
-padding:8px 16px;
-border-radius:20px;
-font-weight:500;
+.hero-visual i{
+background:#f3f4f6;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:.4s;
 }
 
-/* ---------- CARDS ---------- */
+.hero-visual i:hover{
+transform:translateY(-10px) scale(1.1);
+}
 
-.card-grid{
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-20px)}
+}
+
+/* ---------------- GRID ---------------- */
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
-padding:30px;
+padding:28px;
 border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
-transition:.3s;
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
+transition:.35s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* ---------- PROJECTS ---------- */
+/* ---------------- CONSULTING APPROACH ---------------- */
+
+.phase{
+display:flex;
+gap:20px;
+margin-bottom:30px;
+}
+
+.phase-icon{
+width:50px;
+height:50px;
+background:#2563eb;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:20px;
+}
+
+.phase p{
+color:#4b5563;
+margin-top:5px;
+}
+
+/* ---------------- PROJECTS ---------------- */
 
 .project-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
 gap:30px;
 }
 
 .project-card{
 background:white;
-padding:28px;
+padding:30px;
 border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+border:1px solid #e5e7eb;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.project-card::before{
+content:"";
+position:absolute;
+height:4px;
+width:100%;
+background:#2563eb;
+top:0;
+left:0;
+transform:scaleX(0);
+transition:.4s;
+}
+
+.project-card:hover::before{
+transform:scaleX(1);
+}
+
+.project-card:hover{
+transform:translateY(-12px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
 }
 
 .project-card a{
+display:block;
+margin-top:12px;
+text-decoration:none;
 color:#2563eb;
 font-weight:600;
-text-decoration:none;
 }
 
-/* ---------- WHY ME ---------- */
+.tag{
+display:inline-block;
+margin-top:10px;
+background:#eff6ff;
+color:#2563eb;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+}
 
-.why{
-text-align:center;
-max-width:700px;
+/* ---------------- FAQ ---------------- */
+
+.faq-container{
+max-width:800px;
 margin:auto;
-color:#4b5563;
 }
-
-/* ---------- FAQ ---------- */
 
 .faq-item{
-background:white;
-margin-bottom:15px;
 border-radius:10px;
+margin-bottom:15px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+border:1px solid #e5e7eb;
 }
 
 .faq-question{
 width:100%;
 padding:18px;
 border:none;
-background:white;
-font-size:1rem;
+background:#f9fafb;
 font-weight:600;
-text-align:left;
 cursor:pointer;
+text-align:left;
 }
 
 .faq-answer{
 display:none;
-padding:0 18px 18px;
+padding:18px;
 color:#4b5563;
+background:white;
 }
 
-/* ---------- CONTACT ---------- */
-
-.contact{
-text-align:center;
-background:#111827;
-color:white;
-}
-
-.contact p{
-color:#d1d5db;
-}
-
-.whatsapp{
-background:#22c55e;
-color:white;
-}
-
-/* ---------- FOOTER ---------- */
+/* ---------------- FOOTER ---------------- */
 
 footer{
 text-align:center;
-padding:30px;
-font-size:.9rem;
+padding:45px;
 color:#6b7280;
 }
 
-/* ---------- MOBILE ---------- */
-
 @media(max-width:768px){
 .hero{
+flex-direction:column;
 text-align:center;
-justify-content:center;
 }
-
-.hero h1{
-font-size:2.2rem;
-}
+.hero h1{font-size:2.2rem;}
 }
 
 </style>
@@ -227,63 +275,112 @@ font-size:2.2rem;
 <body>
 
 <!-- HERO -->
-<header class="hero">
+
+<section class="hero">
 
 <div>
-<h1>Hi, I'm <span>Ancy Sneha</span></h1>
+
+<h1>Ancy Sneha A</h1>
+<div class="role">Data Analyst | Business Intelligence | AI Analytics</div>
 
 <p>
-Data Analyst specializing in Excel dashboards, SQL analysis,
-and Power BI reporting. I help businesses convert raw data
-into actionable insights and automated reports.
+Data Analyst with 3+ years of industry experience delivering analytics solutions,
+automation, and decision intelligence systems. I help organizations convert
+complex datasets into meaningful insights, operational dashboards,
+and measurable business outcomes.
 </p>
 
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="#contact" class="btn outline">Hire Me</a>
+<a href="#projects" class="btn">View Projects</a>
+<a href="#services" class="btn-outline">Services</a>
 
 </div>
 
-<img src="Ancy.jpeg" class="profile">
-
-</header>
-
-<!-- SKILLS STRIP -->
-<div class="skills-strip">
-<span>Excel Automation</span>
-<span>SQL Analysis</span>
-<span>Power BI Dashboards</span>
-<span>Python Analytics</span>
-<span>Business Reporting</span>
+<div class="hero-visual">
+<i class="fa-solid fa-brain"></i>
+<i class="fa-solid fa-chart-line"></i>
+<i class="fa-solid fa-database"></i>
 </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section>
+<h2>About</h2>
+<p style="max-width:780px;margin:auto;text-align:center;color:#4b5563;">
+Experienced analytics professional specializing in data analysis,
+business reporting, dashboard development, and applied analytics.
+Focused on delivering practical, scalable solutions that enable
+data-driven decision making.
+</p>
+</section>
+
+<!-- SKILLS -->
+
+<section>
+<h2>Skills</h2>
+
+<div class="grid">
+<div class="card"><h3>Programming</h3><p>Python, SQL, Data Modeling, Query Optimization.</p></div>
+<div class="card"><h3>Data Analytics</h3><p>EDA, Data Cleaning, Statistical Analysis, Feature Engineering.</p></div>
+<div class="card"><h3>Visualization</h3><p>Power BI, Excel Dashboards, KPI Reporting.</p></div>
+<div class="card"><h3>Machine Learning</h3><p>Forecasting, Regression, Classification, Model Evaluation.</p></div>
+</div>
+
+</section>
 
 <!-- SERVICES -->
-<section class="section">
 
-<h2>Services</h2>
+<section id="services">
+<h2>Services I Offer</h2>
 
-<div class="card-grid">
-
-<div class="card">
-<h3>Dashboard Development</h3>
-<p>Interactive Excel & Power BI dashboards for business tracking.</p>
+<div class="grid">
+<div class="card"><h3>Dashboard Development</h3><p>Interactive dashboards for performance monitoring.</p></div>
+<div class="card"><h3>Data Preparation</h3><p>Cleaning and structuring data for reliable analytics.</p></div>
+<div class="card"><h3>Business Reporting</h3><p>Automated reports supporting executive decisions.</p></div>
+<div class="card"><h3>Predictive Analytics</h3><p>Analytics models supporting forecasting and planning.</p></div>
 </div>
 
-<div class="card">
-<h3>Data Cleaning</h3>
-<p>Transform messy datasets into structured analysis-ready data.</p>
+</section>
+
+<!-- CONSULTING APPROACH -->
+
+<section>
+
+<h2>My Consulting Approach</h2>
+
+<div class="phase">
+<div class="phase-icon">1</div>
+<div>
+<h3>Pre-Engagement Phase</h3>
+<p>Understand business objectives, define KPIs, evaluate data availability,
+and align analytics outcomes with organizational goals.</p>
+</div>
 </div>
 
-<div class="card">
-<h3>Business Reporting</h3>
-<p>Automated weekly and monthly performance reports.</p>
+<div class="phase">
+<div class="phase-icon">2</div>
+<div>
+<h3>Engagement Phase</h3>
+<p>Perform data preparation, analysis, modeling, and dashboard development
+while maintaining transparent collaboration and iterative feedback.</p>
+</div>
 </div>
 
+<div class="phase">
+<div class="phase-icon">3</div>
+<div>
+<h3>Post-Engagement Phase</h3>
+<p>Deliver documentation, enable knowledge transfer, optimize solutions,
+and support long-term analytics adoption.</p>
+</div>
 </div>
 
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
+
+<section id="projects">
 
 <h2>Projects</h2>
 
@@ -291,104 +388,82 @@ into actionable insights and automated reports.
 
 <div class="project-card">
 <h3>Spotify Streaming Analysis</h3>
-<p>SQL & Python analysis identifying listening trends.</p>
-<a href="spotify.html">View →</a>
+<p>SQL & Python analytics uncovering listener behavior.</p>
+<span class="tag">SQL • Python</span>
+<a href="#">Explore →</a>
 </div>
 
 <div class="project-card">
 <h3>Hotel Booking Analysis</h3>
-<p>Identified cancellation drivers and demand patterns.</p>
-<a href="hotel.html">View →</a>
+<p>Identified cancellation drivers and booking trends.</p>
+<span class="tag">EDA • Analytics</span>
+<a href="#">Explore →</a>
 </div>
 
 <div class="project-card">
-<h3>Hospital Management Analysis</h3>
+<h3>Hospital Management Analytics</h3>
 <p>Operational analytics improving resource utilization.</p>
-<a href="hospital.html">View →</a>
+<span class="tag">Power BI</span>
+<a href="#">Explore →</a>
 </div>
 
 <div class="project-card">
 <h3>Excel Sales Dashboard</h3>
-<p>Automated dashboard tracking KPIs and sales performance.</p>
-<a href="Excel.html">View →</a>
+<p>Automated KPI dashboard tracking business performance.</p>
+<span class="tag">Excel</span>
+<a href="#">Explore →</a>
+</div>
+
+<div class="project-card">
+<h3>Afficionado Coffee Roasters</h3>
+<p>Business analytics analyzing customer and sales trends.</p>
+<span class="tag">Business Intelligence</span>
+<a href="#">Explore →</a>
 </div>
 
 </div>
-
-</section>
-
-<!-- WHY ME -->
-<section class="section">
-<h2>Why Work With Me</h2>
-
-<p class="why">
-I focus on business-ready analytics — not just visuals.
-My goal is delivering insights that help companies make
-faster decisions, save reporting time, and understand performance clearly.
-</p>
 
 </section>
 
 <!-- FAQ -->
-<section class="section">
 
-<h2>Frequently Asked Questions</h2>
+<section>
 
-<div class="faq-item">
-<button class="faq-question">What tools do you use?</button>
-<div class="faq-answer">
-Excel, SQL, Python, and Power BI for analytics and dashboard development.
-</div>
-</div>
+<h2>FAQ</h2>
+
+<div class="faq-container">
 
 <div class="faq-item">
-<button class="faq-question">How fast is delivery?</button>
-<div class="faq-answer">
-Small dashboard projects are typically delivered within 2–5 days.
-</div>
+<button class="faq-question">What services do you provide?</button>
+<div class="faq-answer">Analytics consulting, dashboards, reporting automation, and predictive analytics solutions.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">Do you work with international clients?</button>
-<div class="faq-answer">
-Yes. I work remotely with global clients and provide online collaboration.
-</div>
+<button class="faq-question">Do you handle complete analytics lifecycle?</button>
+<div class="faq-answer">Yes — from business requirement analysis to final deployment and knowledge transfer.</div>
 </div>
 
-</section>
+<div class="faq-item">
+<button class="faq-question">Which tools do you use?</button>
+<div class="faq-answer">Python, SQL, Power BI, Excel, and modern analytics frameworks.</div>
+</div>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-
-<h2>Let’s Work Together</h2>
-
-<p>Need dashboards, reports or analytics support?</p>
-
-<a href="mailto:ancysnehaa@email.com" class="btn primary">
-Email Me
-</a>
-
-<a href="https://wa.me/919994608350" class="btn whatsapp">
-WhatsApp Chat
-</a>
+</div>
 
 </section>
 
 <footer>
-© 2026 | Ancy Sneha — Data Analyst Portfolio
+© 2026 Ancy Sneha A | Data Analyst Portfolio
 </footer>
 
 <script>
-
-/* FAQ Accordion */
-document.querySelectorAll(".faq-question").forEach(btn=>{
-btn.addEventListener("click",()=>{
-const answer=btn.nextElementSibling;
-answer.style.display =
-answer.style.display==="block" ? "none":"block";
+document.querySelectorAll(".faq-question").forEach(q=>{
+q.addEventListener("click",()=>{
+const ans=q.nextElementSibling;
+ans.style.display =
+ans.style.display==="block"?"none":"block";
 });
 });
-
 </script>
 
 </body>
