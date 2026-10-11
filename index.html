@@ -1,456 +1,430 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ancy Sneha | Data Analyst Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ancy Sneha A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
+/* Layout: a playful scrapbook. Gradient blobs behind a big name, tilted "sticker" badges, and a colour-coded bento of projects. */
 :root{
-  --bg:#ffffff;
-  --text:#111111;
-  --muted:#555555;
-  --card:#f4f4f4;
-  --border:#e0e0e0;
-  --primary:#1DB954;
+  --bg:#FBF7FF; --surface:#FFFFFF; --ink:#1E1430; --muted:#5E5470; --line:#E7DEF3;
+  --pink:#E8387A; --orange:#F2711C; --sun:#F5B700; --teal:#0E9F8F; --violet:#6A3FE0;
+  --pink-t:#FFE3EE; --orange-t:#FFE9D9; --sun-t:#FFF3CC; --teal-t:#D8F5F1; --violet-t:#ECE4FF;
+  --blob-a:rgba(232,56,122,.35); --blob-b:rgba(245,183,0,.38); --blob-c:rgba(106,63,224,.30);
+  --display:"Syne","Trebuchet MS",system-ui,sans-serif;
+  --body:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
-
-body.dark{
-  --bg:#0f0f0f;
-  --text:#ffffff;
-  --muted:#b3b3b3;
-  --card:#181818;
-  --border:#262626;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-  transition:.3s;
-}
-
-header{
-  max-width:1100px;
-  margin:auto;
-  padding:80px 20px 60px;
-  position:relative;
-}
-
-.toggle{
-  position:absolute;
-  top:20px;
-  right:20px;
-  padding:8px 16px;
-  border-radius:20px;
-  border:1px solid var(--border);
-  background:var(--card);
-  cursor:pointer;
-  font-weight:600;
-}
-
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 180px;
-  gap:40px;
-  align-items:center;
-}
-
-.hero img{
-  width:180px;
-  height:180px;
-  object-fit:cover;
-  border-radius:50%;
-  border:4px solid var(--primary);
-}
-
-.hero h1{
-  font-size:3rem;
-  font-weight:700;
-}
-
-.hero h1 span{
-  color:var(--primary);
-}
-
-.hero p{
-  margin-top:15px;
-  max-width:650px;
-  font-size:1.15rem;
-  color:var(--muted);
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px 80px;
-}
-
-section{margin-top:80px}
-
-.section-title{
-  font-size:1.9rem;
-  margin-bottom:35px;
-  position:relative;
-}
-
-.section-title::after{
-  content:"";
-  position:absolute;
-  width:50px;
-  height:4px;
-  background:var(--primary);
-  bottom:-10px;
-  left:0;
-  border-radius:2px;
-}
-
-/* ABOUT */
-.about{
-  max-width:900px;
-  color:var(--muted);
-  font-size:1.05rem;
-}
-
-/* SKILLS */
-.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.skill-card{
-  background:var(--card);
-  padding:28px;
-  border-radius:18px;
-  border:1px solid var(--border);
-}
-
-.skill-card h3{
-  color:var(--primary);
-  margin-bottom:15px;
-}
-
-.skill-card li{
-  margin-bottom:10px;
-}
-
-/* PROJECTS */
-.projects{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
-}
-
-.project{
-  background:var(--card);
-  padding:28px;
-  border-radius:18px;
-  border:1px solid var(--border);
-  transition:.3s;
-}
-
-.project:hover{
-  transform:translateY(-6px);
-}
-
-.project h3{
-  margin-bottom:10px;
-}
-
-.project p{
-  color:var(--muted);
-  margin-bottom:15px;
-}
-
-.project a{
-  color:var(--primary);
-  font-weight:600;
-}
-
-footer{
-  text-align:center;
-  padding:40px 20px;
-  color:var(--muted);
-  font-size:.9rem;
-}
-
-@media(max-width:768px){
-  .hero{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-  .hero img{
-    margin:auto;
-  }
-  .hero h1{font-size:2.2rem}
-}
-/* Contact Section */
-.contact-section {
-  padding: 80px 20px;
-  background-color: #f9fafb;
-}
-
-.contact-container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
-}
-
-.contact-container h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  color: #111827;
-}
-
-.contact-subtitle {
-  font-size: 1.05rem;
-  color: #4b5563;
-  max-width: 650px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-}
-
-/* Cards */
-.contact-cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.contact-card {
-  background: #ffffff;
-  padding: 30px;
-  width: 260px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-
-.contact-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 6px;
-  color: #1f2937;
-}
-
-.contact-card p {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin-bottom: 14px;
-}
-
-.contact-link {
-  display: inline-block;
-  font-weight: 600;
-  text-decoration: none;
-  color: #2563eb;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.contact-link:hover {
-  border-color: #2563eb;
-}
-
-/* Highlight WhatsApp */
-.contact-card.highlight {
-  border: 2px solid #22c55e;
-}
-
-.contact-card.highlight .contact-link {
-  color: #16a34a;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .contact-cards {
-    flex-direction: column;
-    align-items: center;
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#140E1F; --surface:#1E1630; --ink:#F4EEFF; --muted:#B5A9C9; --line:#33284A;
+    --pink:#FF6FA3; --orange:#FF9A55; --sun:#FFD04D; --teal:#3FD6C3; --violet:#A68BFF;
+    --pink-t:#3A1A2C; --orange-t:#3A2416; --sun-t:#3A3012; --teal-t:#123330; --violet-t:#2A1F4D;
+    --blob-a:rgba(255,111,163,.28); --blob-b:rgba(255,208,77,.20); --blob-c:rgba(166,139,255,.30);
+    color-scheme:dark;
   }
 }
+:root[data-theme="dark"]{
+  --bg:#140E1F; --surface:#1E1630; --ink:#F4EEFF; --muted:#B5A9C9; --line:#33284A;
+  --pink:#FF6FA3; --orange:#FF9A55; --sun:#FFD04D; --teal:#3FD6C3; --violet:#A68BFF;
+  --pink-t:#3A1A2C; --orange-t:#3A2416; --sun-t:#3A3012; --teal-t:#123330; --violet-t:#2A1F4D;
+  --blob-a:rgba(255,111,163,.28); --blob-b:rgba(255,208,77,.20); --blob-c:rgba(166,139,255,.30);
+  color-scheme:dark;
+}
 
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:0 56px;position:relative}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:8px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+
+/* blobs */
+.blobs{position:absolute;inset:0 0 auto 0;height:640px;pointer-events:none;z-index:0;overflow:hidden}
+.blobs i{position:absolute;border-radius:50%;filter:blur(60px)}
+.blobs i:nth-child(1){width:420px;height:420px;background:var(--blob-a);top:-80px;right:-60px}
+.blobs i:nth-child(2){width:340px;height:340px;background:var(--blob-b);top:180px;right:240px}
+.blobs i:nth-child(3){width:380px;height:380px;background:var(--blob-c);top:40px;left:-140px}
+
+/* nav */
+.top{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:22px}
+.logo{font-family:var(--display);font-weight:800;font-size:20px;display:inline-flex;align-items:center;gap:8px}
+.logo b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--ink);color:var(--bg);font-size:15px}
+.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-weight:600;font-size:14px;padding:7px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.top nav a:hover{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(28px,5vw,60px);align-items:center;padding-block:clamp(32px,7vw,72px) clamp(36px,6vw,64px)}
+.hello{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;background:var(--surface);border:1px solid var(--line);padding:8px 16px 8px 10px;border-radius:999px;margin-bottom:22px}
+.hello .dot{width:10px;height:10px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px var(--teal-t)}
+.hero h1{font-size:clamp(3.4rem,10.5vw,7.2rem);font-weight:800;letter-spacing:-.03em;line-height:.92}
+.hero h1 .grad{background:linear-gradient(100deg,var(--pink) 0%,var(--orange) 45%,var(--violet) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.lede{margin-top:24px;max-width:40ch;font-size:clamp(1.05rem,2vw,1.22rem);color:var(--muted)}
+.lede mark{background:linear-gradient(transparent 58%,var(--sun-t) 58%);color:var(--ink);font-weight:600;padding:0 2px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px;padding:13px 22px;border-radius:14px;border:2px solid var(--ink);transition:transform .15s, box-shadow .15s}
+.btn.primary{background:var(--ink);color:var(--bg);box-shadow:4px 4px 0 var(--pink)}
+.btn.ghost{background:var(--surface)}
+.btn:hover{transform:translate(-2px,-2px)}
+.btn.primary:hover{box-shadow:6px 6px 0 var(--pink)}
+
+/* stickers */
+.stickers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sticker{background:var(--surface);border:2px solid var(--ink);border-radius:18px;padding:18px;box-shadow:4px 4px 0 var(--ink);display:flex;flex-direction:column;gap:4px;min-width:0}
+.sticker small{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sticker b{font-family:var(--display);font-size:1.25rem}
+.s1{background:var(--violet-t)} .s2{background:var(--sun-t)}
+.s3{background:var(--teal-t)} .s4{background:var(--pink-t)}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{animation:pop .8s cubic-bezier(.2,.9,.3,1.2) both}
+  @keyframes pop{from{transform:translateY(16px) scale(.98)}to{transform:none}}
+}
+
+/* stats */
+.stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.stat{border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.stat:nth-child(1){background:var(--violet-t)} .stat:nth-child(2){background:var(--orange-t)}
+.stat:nth-child(3){background:var(--pink-t)} .stat:nth-child(4){background:var(--teal-t)}
+.stat b{font-family:var(--display);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat:nth-child(1) b{color:var(--violet)} .stat:nth-child(2) b{color:var(--orange)}
+.stat:nth-child(3) b{color:var(--pink)} .stat:nth-child(4) b{color:var(--teal)}
+.stat span{font-size:14px;color:var(--muted);font-weight:500}
+
+/* sections */
+section.block{padding-block:clamp(48px,8vw,84px) 0;display:flex;flex-direction:column;gap:28px}
+.head{display:flex;flex-direction:column;gap:8px}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.head h2{font-size:clamp(2rem,4.8vw,3.2rem);font-weight:800;letter-spacing:-.02em}
+.k-violet{color:var(--violet)} .k-pink{color:var(--pink)} .k-orange{color:var(--orange)} .k-teal{color:var(--teal)}
+
+/* experience */
+.timeline{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,3.5vw,36px);display:flex;flex-direction:column;gap:30px}
+.job{display:grid;grid-template-columns:22px minmax(0,1fr);gap:16px;position:relative}
+.job .pin{width:18px;height:18px;border-radius:50%;margin-top:6px;border:4px solid var(--surface);box-shadow:0 0 0 2px currentColor;background:currentColor}
+.job:nth-child(1) .pin{color:var(--violet)} .job:nth-child(2) .pin{color:var(--pink)}
+.job:not(:last-child)::after{content:"";position:absolute;left:8px;top:30px;bottom:-26px;width:2px;background:var(--line)}
+.job-head{display:flex;justify-content:space-between;gap:6px 18px;flex-wrap:wrap;align-items:baseline}
+.job h3{font-size:1.3rem;font-weight:700}
+.when{font-family:var(--mono);font-size:12.5px;padding:4px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+.org{font-weight:600;color:var(--muted);margin-top:2px}
+ul.points{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;max-width:70ch}
+ul.points li{position:relative;padding-left:22px}
+ul.points li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:10px;border-radius:3px;background:var(--sun);transform:rotate(45deg)}
+.break{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border:2px dashed var(--line);border-radius:16px;padding:14px 18px}
+.break .when{background:var(--sun-t);border-color:transparent}
+
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid transparent;transition:transform .2s, border-color .2s}
+.card:hover{border-color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){.card:hover{transform:translateY(-4px) rotate(-.4deg)}}
+.c-pink{background:var(--pink-t)} .c-sun{background:var(--sun-t)} .c-teal{background:var(--teal-t)}
+.c-violet{background:var(--violet-t)} .c-orange{background:var(--orange-t)}
+.card h3{font-size:1.25rem;font-weight:700}
+.card p{color:var(--muted);font-size:15px}
+.chip{align-self:flex-start;font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;padding:5px 10px;border-radius:999px;background:var(--surface);font-weight:500}
+.go{margin-top:auto;align-self:flex-start;display:inline-flex;gap:8px;align-items:center;text-decoration:none;font-weight:700;font-size:14px;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px}
+.go:hover{background:var(--pink);color:#fff}
+.lock{margin-top:auto;font-weight:600;font-size:14px;color:var(--muted);display:inline-flex;gap:8px;align-items:center}
+.fine{font-size:14px;color:var(--muted)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.span6{grid-column:span 6} .span4{grid-column:span 4} .span3{grid-column:span 3} .span2{grid-column:span 2}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.mini div{background:var(--surface);border-radius:12px;padding:10px 14px;display:flex;flex-direction:column}
+.mini b{font-family:var(--display);font-weight:800;font-size:1.35rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.mini span{font-size:12.5px;color:var(--muted)}
+.tick{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tick li{font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--surface)}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.links .go{margin-top:0}
+.go.alt{background:var(--surface);color:var(--ink)}
+.tech{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.big h3{font-size:clamp(1.4rem,3vw,1.9rem)}
+.moods{display:flex;gap:8px;flex-wrap:wrap}
+.mood{font-weight:700;font-size:13.5px;padding:6px 14px;border-radius:999px;background:var(--surface)}
+.mood.pos{color:var(--teal)} .mood.neg{color:var(--pink)} .mood.mix{color:var(--orange)} .mood.neu{color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border-radius:14px;padding:12px 14px;font-size:14px;font-weight:500;display:flex;flex-direction:column;gap:6px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:var(--ink);color:var(--bg);font-family:var(--display);font-weight:800;font-size:13px}
+.planned{background:transparent;border:2px dashed var(--line)}
+.planned:hover{border-color:var(--violet)}
+.soon{color:var(--violet);background:var(--violet-t)}
+.subhead{font-family:var(--display);font-weight:700;font-size:1.3rem;margin-top:12px}
+
+/* skills */
+.skillwrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.sk h3{font-size:1.05rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.sk h3::before{content:"";width:12px;height:12px;border-radius:4px;background:var(--c)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:13.5px;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--t)}
+
+/* creds */
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.cred{border:2px solid var(--ink);border-radius:20px;padding:20px;background:var(--surface);box-shadow:5px 5px 0 var(--c);display:flex;flex-direction:column;gap:4px}
+.cred .code{font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--c)}
+.cred b{font-weight:700}
+.cred span{color:var(--muted);font-size:14px}
+
+/* contact */
+.contact{margin-top:clamp(48px,8vw,84px);border-radius:28px;padding:clamp(26px,5vw,52px);background:linear-gradient(120deg,var(--pink-t),var(--orange-t) 50%,var(--violet-t));display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
+.contact h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;letter-spacing:-.02em;line-height:1}
+.contact p{color:var(--muted);margin-top:12px;max-width:36ch}
+.lines{display:flex;flex-direction:column;gap:10px}
+.line{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border-radius:14px;padding:12px 14px}
+.line .k{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);width:70px}
+.line .v{font-weight:600;user-select:all;overflow-wrap:anywhere;min-width:0;flex:1}
+.line a.v{user-select:auto;text-decoration:none}
+.line a.v:hover{color:var(--pink)}
+.copy{font:600 12.5px var(--body);background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:6px 12px;cursor:pointer}
+.copy:hover{background:var(--pink);color:#fff}
+footer{padding-top:28px;text-align:center;font-size:13.5px;color:var(--muted)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr}
+  .span6,.span4,.span3,.span2{grid-column:auto}
+  .contact{grid-template-columns:1fr}
+}
 </style>
-</head>
 
-<body>
+<div class="wrap">
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
 
-<header>
-  <button class="toggle" onclick="toggleTheme()">🌙 Dark</button>
+  <header class="top">
+    <span class="logo"><b>AS</b>Ancy Sneha</span>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a><a href="#builds">Client work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <div class="hero">
+  <section class="hero">
     <div>
-      <h1>Hello, I'm <span>Ancy Sneha</span></h1>
-      <p>
-        Data Analyst specializing in Excel dashboards, SQL analysis, and business reporting.
-        I help businesses transform raw data into clear insights, automated reports,
-        and decision-ready dashboards.
-      </p>
-    </div>
-
-    <img src="Ancy.jpeg" alt="Profile Photo">
-  </div>
-</header>
-
-<div class="container">
-
-<!-- ABOUT -->
-<section>
-  <h2 class="section-title">Who I Am</h2>
-  <div class="about">
-    <p>
-      I work with structured business data across domains such as sales, hospitality,
-      healthcare, and operations. My focus is on cleaning data, automating reports,
-      and simplifying complex information into actionable insights.
-    </p>
-    <br>
-    <p>
-      I enjoy handling end-to-end data projects from data preparation and analysis
-      to visualization and storytelling helping teams track performance and make
-      data-driven decisions faster.
-    </p>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section>
-  <h2 class="section-title">Skills</h2>
-  <div class="skills">
-
-    <div class="skill-card">
-      <h3>Advanced Excel</h3>
-      <ul>
-        <li>Pivot Tables & Charts</li>
-        <li>Power Query</li>
-        <li>VLOOKUP / XLOOKUP</li>
-        <li>Dashboard Creation</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Data Analysis</h3>
-      <ul>
-        <li>Data Cleaning & EDA</li>
-        <li>Pandas & NumPy</li>
-        <li>Power BI</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Databases & Programming</h3>
-      <ul>
-        <li>SQL (MySQL, PostgreSQL)</li>
-        <li>Python</li>
-        <li>ETL Concepts</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Visualization & Tools</h3>
-      <ul>
-        <li>Matplotlib</li>
-        <li>Jupyter Notebook</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section>
-  <h2 class="section-title">Projects</h2>
-
-  <div class="projects">
-
-    <div class="project">
-      <h3>Spotify Streaming Trends Analysis</h3>
-      <p>
-        Built an analytical report to identify artist popularity, genre trends,
-        and listening patterns using SQL and Python with clear visual insights.
-      </p>
-      <a href="spotify.html" target="_blank">View Project →</a>
-    </div>
-
-    <div class="project">
-      <h3>Hotel Booking Data Analysis</h3>
-      <p>
-        Analyzed booking data to identify cancellation drivers, seasonal demand,
-        and customer behavior. Delivered insights through Excel reports and visuals.
-      </p>
-      <a href="hotel.html">View Project →</a>
-    </div>
-
-    <div class="project">
-      <h3>Hospital Management Data Analysis</h3>
-      <p>
-        Analyzed patient flow, department performance, and resource utilization
-        to identify operational bottlenecks and efficiency opportunities.
-      </p>
-      <a href="hospital.html">View Project →</a>
-    </div>
-    <div class="project">
-      <h3>Excel Sales Dashboard & Automation</h3>
-      <p>
-        This project focuses on building an end-to-end Excel dashboard to analyze sales performance and automate recurring business reports. 
-      </p>
-      <a href="Excel.html">View Project →</a>
-    </div>
-
-  </div>
-</section>
-<section id="contact" class="contact-section">
-
-    <div class="contact-cards">
-      <!-- Email -->
-      <div class="contact-card">
-        <h3>Email</h3>
-        <p>Reach me anytime</p>
-        <a href="mailto:ancysnehaa@email.com" class="contact-link">
-          ancysnehaa@email.com
-        </a>
-      </div>
-
-      <!-- WhatsApp -->
-      <div class="contact-card highlight">
-        <h3>WhatsApp</h3>
-        <p>Fastest response</p>
-        <a href="https://wa.me/919994608350" target="_blank" class="contact-link">
-          Chat on WhatsApp
-        </a>
+      <div class="hello"><span class="dot"></span>Open to data analytics roles</div>
+      <h1>Hi, I'm<span class="grad">Ancy Sneha</span></h1>
+      <p class="lede">A data analyst who turns messy data into <mark>clear dashboards</mark> and builds <mark>AI/ML projects</mark> and practical software for small businesses.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
       </div>
     </div>
-  </div>
-</section>
+    <div class="stickers" aria-label="Quick facts">
+      <div class="sticker s1"><small>Certified</small><b>PL-300 · DP-100</b></div>
+      <div class="sticker s2"><small>Based in</small><b>Coimbatore, TN</b></div>
+      <div class="sticker s3"><small>Daily tools</small><b>Python · SQL · Power BI</b></div>
+      <div class="sticker s4"><small>Speaks</small><b>English · Tamil</b></div>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Highlights">
+    <div class="stat"><b>1 yr 9 mo</b><span>at Kovai.co, intern to specialist</span></div>
+    <div class="stat"><b>41,500</b><span>labelled comments for my sentiment model</span></div>
+    <div class="stat"><b>5–6</b><span>small businesses supported</span></div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="head"><span class="kicker k-violet">Experience</span><h2>Where I've worked</h2></div>
+    <div class="timeline">
+      <div class="job">
+        <span class="pin"></span>
+        <div>
+          <div class="job-head"><h3>Associate Migration Specialist</h3><span class="when">Nov 2023 – Jan 2025</span></div>
+          <p class="org">Kovai.co · Data Operations &amp; Analytics</p>
+          <ul class="points">
+            <li>Automated data workflows for link analysis and HTML sanitisation, improving operational efficiency.</li>
+            <li>Built Power BI dashboards to track migration progress, customer-related gaps and business performance.</li>
+            <li>Ran data validation, transformation and quality checks to improve migration accuracy.</li>
+            <li>Developed and supported API-based migration utilities using .NET, REST APIs and data-processing libraries.</li>
+            <li>Worked with cross-functional teams and customers to turn requirements into product and process improvements.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <span class="pin"></span>
+        <div>
+          <div class="job-head"><h3>Intern</h3><span class="when">May 2023 – Oct 2023</span></div>
+          <p class="org">Kovai.co · Data Migration</p>
+          <ul class="points">
+            <li>Assisted on customer data migration projects.</li>
+            <li>Built JavaScript solutions to meet specific client requirements.</li>
+            <li>Analysed client data during migration, identified missing records and reported them to clients.</li>
+            <li>Built sites to client specifications.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="break">
+        <span class="when">Feb 2025 – now</span>
+        <p>Worked on client projects: websites, an AI chatbot and an ML-powered attendance tracker for small businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="builds">
+    <div class="head"><span class="kicker k-pink">Client work</span><h2>Built for small businesses</h2></div>
+    <div class="grid3">
+      <article class="card c-pink">
+        <span class="chip">E-commerce site</span>
+        <h3>Shaza Store</h3>
+        <p>Online storefront for a handmade candle business.</p>
+        <p class="fine">🔒 The store's private admin site can't be shared.</p>
+        <a class="go" href="https://candle-shaza1.vercel.app/" target="_blank" rel="noopener">Visit public site ↗</a>
+      </article>
+      <article class="card c-sun">
+        <span class="chip">Website + AI chatbot</span>
+        <h3>Makeup academy</h3>
+        <p>Academy website, plus an AI-powered chatbot that gives students quick access to their information.</p>
+        <p class="fine">🔒 The academy's private student site can't be shared.</p>
+        <a class="go" href="https://myha-xi.vercel.app/" target="_blank" rel="noopener">Visit public site ↗</a>
+      </article>
+      <article class="card c-teal">
+        <span class="chip">Private system · ML</span>
+        <h3>Attendance Tracker</h3>
+        <p>Tracks student attendance and progress. Student report summaries are generated automatically using machine learning.</p>
+        <span class="lock">🔒 Private: holds student records</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="head"><span class="kicker k-orange">Projects</span><h2>AI/ML &amp; data projects</h2></div>
+    <div class="bento">
+      <article class="card c-violet big span6">
+        <span class="tech">Python · NLP · Machine Learning</span>
+        <h3>Sentiment Mood Analyser</h3>
+        <p>Reads comments and tells you how people feel, including Tamil comments. Creators can use it to summarise their YouTube comments, and movie fans can use it to gauge the mood of film reviews. It supports 3 languages today, with more planned.</p>
+        <div class="moods" aria-label="Sentiment classes">
+          <span class="mood pos">Positive</span><span class="mood neg">Negative</span><span class="mood mix">Mixed</span><span class="mood neu">Neutral</span>
+        </div>
+        <ol class="steps">
+          <li>Split ~41,500 labelled comments into train, dev and test sets</li>
+          <li>Train the classification model</li>
+          <li>Predict the mood of a single comment</li>
+          <li>Summarise sentiment percentages for a video or film</li>
+        </ol>
+      </article>
+      <article class="card c-teal span4">
+        <span class="tech">Python · Pandas · SQL · Jupyter · Spotify Web API</span>
+        <h3>Spotify Streaming Trends Analysis</h3>
+        <p>An analytical report on artist popularity, genre trends and listening patterns, built with SQL and Python and presented with clear visual insights.</p>
+        <ol class="steps">
+          <li>Collect data from Kaggle and the Spotify Developer API</li>
+          <li>Clean and transform it with Pandas</li>
+          <li>Design a SQL schema and load the data</li>
+          <li>Run analytical SQL queries</li>
+          <li>Visualise findings in Jupyter</li>
+        </ol>
+        <a class="go" href="https://27ancy.github.io/portfolio/spotify.html" target="_blank" rel="noopener">View project ↗</a>
+      </article>
+      <article class="card c-orange span2">
+        <span class="tech">SQL · Power BI</span>
+        <h3>Customer churn dashboard</h3>
+        <p>Power BI dashboard on SQL data models that analyses customer behaviour and surfaces churn-related trends for business decisions.</p>
+      </article>
+      <article class="card c-pink span3">
+        <span class="tech">Python · Pandas · Matplotlib</span>
+        <h3>Hotel Performance Analysis</h3>
+        <p>End-to-end cleaning, feature engineering and exploratory analysis of raw hotel booking data, revealing occupancy, revenue seasonality, customer segments and cancellation trends to guide operations and pricing.</p>
+        <div class="mini">
+          <div><b>57,000+</b><span>records analysed</span></div>
+          <div><b>3,200</b><span>missing values fixed</span></div>
+          <div><b>12</b><span>charts created</span></div>
+        </div>
+        <div class="links">
+          <a class="go" href="https://27ancy.github.io/portfolio/hotel.html" target="_blank" rel="noopener">View project ↗</a>
+          <a class="go alt" href="https://github.com/27Ancy/github-portfolio/blob/main/Hotel%20Rooms%20analysis.ipynb" target="_blank" rel="noopener">Code on GitHub ↗</a>
+        </div>
+      </article>
+      <article class="card c-sun span3">
+        <span class="tech">Power BI · DAX</span>
+        <h3>Patient Waiting List Insights</h3>
+        <p>Interactive Power BI dashboard on inpatient, outpatient and day-case waiting lists from 2018 to 2021. Consolidated multiple CSV sources, mapped specialties and built DAX measures for median wait, averages and year-on-year change.</p>
+        <div class="mini">
+          <div><b>709K</b><span>waiting, latest month</span></div>
+          <div><b>640K</b><span>same month, previous year</span></div>
+          <div><b>Median</b><span>wait as key KPI</span></div>
+        </div>
+        <div class="links">
+          <a class="go" href="https://27ancy.github.io/portfolio/hospital.html" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+      </article>
+      <article class="card c-teal span6">
+        <span class="tech">Advanced Excel · Power Query · Automation</span>
+        <h3>Excel Sales Dashboard &amp; Automation</h3>
+        <p>End-to-end Excel dashboard that tracks revenue, orders, growth and regional performance, with dynamic KPI filters and automated recurring reports that cut repetitive manual work.</p>
+        <ul class="tick" aria-label="Excel techniques used">
+          <li>XLOOKUP &amp; INDEX-MATCH</li><li>SUMIFS / COUNTIFS</li><li>Pivot Tables &amp; Charts</li><li>Power Query</li><li>Dynamic KPI filters</li><li>Report automation</li>
+        </ul>
+        <div class="links">
+          <a class="go" href="https://27ancy.github.io/portfolio/Excel.html" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+      </article>
+    </div>
+
+  </section>
+
+  <section class="block" id="skills">
+    <div class="head"><span class="kicker k-teal">Skills</span><h2>My toolkit</h2></div>
+    <div class="skillwrap">
+      <div class="sk" style="--c:var(--violet);--t:var(--violet-t)"><h3>Analytics</h3><div class="pills"><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Data cleaning</span><span>Data validation</span><span>KPI reporting</span></div></div>
+      <div class="sk" style="--c:var(--pink);--t:var(--pink-t)"><h3>Programming</h3><div class="pills"><span>Python</span><span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>JavaScript</span></div></div>
+      <div class="sk" style="--c:var(--orange);--t:var(--orange-t)"><h3>Visualisation</h3><div class="pills"><span>Power BI</span><span>DAX</span><span>Tableau</span><span>Matplotlib</span><span>Seaborn</span></div></div>
+      <div class="sk" style="--c:var(--teal);--t:var(--teal-t)"><h3>Advanced Excel</h3><div class="pills"><span>XLOOKUP</span><span>INDEX-MATCH</span><span>SUMIFS</span><span>Pivot Tables</span><span>Power Query</span><span>Dashboards</span><span>Automation</span></div></div>
+      <div class="sk" style="--c:var(--teal);--t:var(--teal-t)"><h3>AI / ML</h3><div class="pills"><span>Scikit-learn</span><span>TensorFlow/Keras</span><span>Regression</span><span>Classification</span><span>Clustering</span><span>NLP</span></div></div>
+      <div class="sk" style="--c:var(--sun);--t:var(--sun-t)"><h3>Apps &amp; automation</h3><div class="pills"><span>Streamlit</span><span>Chatbots</span><span>Workflow automation</span><span>Web apps</span></div></div>
+      <div class="sk" style="--c:var(--violet);--t:var(--violet-t)"><h3>Engineering</h3><div class="pills"><span>Git</span><span>Jupyter</span><span>.NET</span><span>REST APIs</span></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="head"><span class="kicker k-violet">Certifications</span><h2>Microsoft certified</h2></div>
+    <div class="creds">
+      <div class="cred" style="--c:var(--violet)"><span class="code">PL-300</span><b>Power BI Data Analyst Associate</b><span>Microsoft Certified</span></div>
+      <div class="cred" style="--c:var(--teal)"><span class="code">DP-100</span><b>Azure Data Scientist Associate</b><span>Microsoft Certified</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="qualification">
+    <div class="head"><span class="kicker k-orange">Qualification</span><h2>Education</h2></div>
+    <div class="creds">
+      <div class="cred" style="--c:var(--orange)"><span class="code">B.Tech</span><b>Information Technology · 2019 – 2023</b><span>Sri Krishna College of Engineering and Technology, Coimbatore</span></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>Let's work together!</h2>
+      <p>Hiring for a data analytics, data operations or AI/ML role? I'd love to hear from you.</p>
+    </div>
+    <div class="lines">
+      <div class="line"><span class="k">Email</span><span class="v" id="email">ancysnehaa@gmail.com</span><button class="copy" id="copy-email" data-target="email" type="button">Copy</button></div>
+      <div class="line"><span class="k">Phone</span><span class="v" id="phone">+91 99946 08350</span><button class="copy" id="copy-phone" data-target="phone" type="button">Copy</button></div>
+      <div class="line"><span class="k">LinkedIn</span><a class="v" href="https://linkedin.com/in/ancy-sneha" target="_blank" rel="noopener">linkedin.com/in/ancy-sneha ↗</a></div>
+    </div>
+  </section>
+
+  <footer>Ancy Sneha | Coimbatore | 9994608350</footer>
 
 </div>
 
-<footer>
-  © 2026 | Ancy Sneha — Data Analyst & Dashboard Specialist
-</footer>
-
 <script>
-function toggleTheme(){
-  document.body.classList.toggle("dark");
-}
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.target);
+    var text = el.textContent.trim();
+    function reset(){ setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); }
+    function fallback(){
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected'; reset();
+    }
+    try { navigator.clipboard.writeText(text).then(function(){ btn.textContent = 'Copied!'; reset(); }, fallback); }
+    catch(e){ fallback(); }
+  });
+});
 </script>
 
-</body>
-</html>
-
-
-
-
-
-
+</body></html>
